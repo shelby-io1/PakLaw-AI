@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "454052235846",
+    "project_id": "paklaw-ai-bfbb4",
+    "storage_bucket": "paklaw-ai-bfbb4.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:454052235846:android:46d984f8fcaa10818bd847",
+        "android_client_info": {
+          "package_name": "com.aistudio.paklawai.ndyqtw"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "454052235846-30ug5pdiajeqb2ajbieig8rdp7go2hvs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCIE0wKN2w4XPf-u_qUeFTFexQha6DvMBs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "454052235846-30ug5pdiajeqb2ajbieig8rdp7go2hvs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,6 @@
+{
+  "name": "PakLaw AI",
+  "description": "An AI-powered legal literacy, library, study, and emergency aid helper for Pakistan.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
