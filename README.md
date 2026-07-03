@@ -1,21 +1,28 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# PakLaw AI
 
-# Run and deploy your AI Studio app
+PakLaw AI is an Android application designed to serve as an AI-powered legal literacy, library, study, and emergency aid helper for Pakistan.
 
-This contains everything you need to run your app locally.
+## Features
 
-View your app in AI Studio: https://ai.studio/apps/eb100cb7-b8ba-440e-91e7-75a5f49fef73
+- **AI Legal Assistant**: Engage in conversations with an AI assistant powered by Google Gemini to get information about legal topics.
+- **User Authentication**: Secure sign-up and log-in functionality for personalized experience.
+- **Chat History**: Automatically saves your conversations with the AI to Firestore for persistence.
+- **Library & Study**: Access to legal resources and study materials.
+- **Local Persistence**: Uses Room database for local data management.
 
-## Run Locally
+## Project Structure
 
-**Prerequisites:**  [Android Studio](https://developer.android.com/studio)
+- `app/src/main/java/com/example/ui/`: Contains the UI components built with Jetpack Compose, organized by screens (`LoginScreen`, `SignUpScreen`, `MainAppScreen`) and the `PakLawViewModel` for business logic.
+- `app/src/main/java/com/example/data/`: Handles the data layer, including:
+  - `Database.kt`: Local Room database implementation.
+  - `FirestoreManager.kt`: Interaction with Firebase Firestore to store chat history and user profiles.
+  - `GeminiClient.kt`: Integration with the Google Gemini API.
+  - `LibraryData.kt`: Data models for legal resources.
 
+## How it Works
 
-1. Open Android Studio
-2. Select **Open** and choose the directory containing this project
-3. Allow Android Studio to fix any incompatibilities as it imports the project.
-4. Create a file named `.env` in the project directory and set `GEMINI_API_KEY` in that file to your Gemini API key (see `.env.example` for an example)
-5. Remove this line from the app's `build.gradle.kts` file: `signingConfig = signingConfigs.getByName("debugConfig")`
-6. Run the app on an emulator or physical device
+1. **Authentication**: Users create an account or log in via `SignUpScreen` or `LoginScreen`.
+2. **Chat**: Once authenticated, the user can chat with the AI assistant on the `MainAppScreen`.
+3. **Data Storage**: When a user chats, the application uses `FirestoreManager` to save the conversation to Firebase Firestore.
+4. **Local Data**: Essential user data and cached information are stored locally using the Room database (`Database.kt`).
+5. **AI Interaction**: Conversations are sent to and from the AI model via `GeminiClient` using the Google Gemini API.
